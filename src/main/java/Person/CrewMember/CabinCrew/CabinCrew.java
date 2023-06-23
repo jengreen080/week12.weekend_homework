@@ -10,6 +10,19 @@ public class CabinCrew extends CrewMember {
 
     public CabinCrew(String name, Rank crewMemberRank){
         super(name, crewMemberRank);
+        this.name = name;
     }
-    TODO relayMessagesToPassengers;
+
+    public String relayMessageToPassengers(){
+        return "Please fasten your seatbelts";
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public String setName(String name){
+        return this.name = name;
+    }
+
 }

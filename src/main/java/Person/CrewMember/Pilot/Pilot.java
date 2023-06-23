@@ -12,7 +12,18 @@ public class Pilot extends CrewMember {
 
     public Pilot(String name, Rank crewMemberRank, String pilotLicenceNumber){
         super(name, crewMemberRank);
+        this.name = name;
         this.pilotLicenceNumber = pilotLicenceNumber;
     }
-    flyPlane()
+
+    public String getName(){
+        return name;
+    }
+
+    public String setName(String name){
+        return this.name = name;
+    }
+    public String flyPlane() {
+        return "IN THE CLOUDS";
+    }
 }
