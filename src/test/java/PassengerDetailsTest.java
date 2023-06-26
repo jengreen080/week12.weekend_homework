@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 public class PassengerDetailsTest {
 
-    PassengerDetails passengerDetails;
+    PassengerDetails passengerDetails = null;
     Passenger passenger1;
     Passenger passenger2;
 
@@ -17,9 +17,10 @@ public class PassengerDetailsTest {
     public void before() {
         passenger1 = new Passenger("Oscar", 1);
         passenger2 = new Passenger("Rusty", 1);
-        HashMap<Passenger, String> passengerDetails = new HashMap<>();
-        passengerDetails.put(passenger1, "Destination: Edinburgh");
-        passengerDetails.put(passenger2, "Destination: Rio");
+        HashMap<Passenger, String> details = new HashMap<>();
+        details.put(passenger1, "Destination: Edinburgh");
+        details.put(passenger2, "Destination: Rio");
+        passengerDetails = new PassengerDetails(details);
     }
 
 //    @Test
@@ -29,6 +30,6 @@ public class PassengerDetailsTest {
 
     @Test
         public void accessHashmapValue(){
-            assertEquals("Destination: Rio", passengerDetails.showHashmap().values());
+            assertEquals("Destination: Rio", passengerDetails.showHashmap().get(passenger2));
         }
 }

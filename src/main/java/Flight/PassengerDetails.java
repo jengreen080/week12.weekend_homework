@@ -12,7 +12,7 @@ public class PassengerDetails {
         this.passengerDetails = passengerDetails;
     }
 
-    public void addPassengerhtDetails(Passenger passenger, String time){
+    public void addPassengerDetails(Passenger passenger, String time){
         passengerDetails.put(passenger, time);
     }
 
